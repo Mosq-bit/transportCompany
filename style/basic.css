@@ -2,28 +2,28 @@
 
 @font-face {
     font-family: 'BigBang';
-    src: url(/transportCompony/font/BigBang.ttf);
+    src: url(/transportCompany/font/BigBang.ttf);
 }
 
 
 @font-face {
   font-family: "Geometria";
-  src: url(/transportCompony/font/geometria-regular.ttf);
+  src: url(/transportCompany/font/geometria-regular.ttf);
 }
 
 @font-face {
   font-family: "GeometriaItalick";
-  src: url(/transportCompony/font/Geometria-ThinItalic.ttf);
+  src: url(/transportCompany/font/Geometria-ThinItalic.ttf);
 }
 
 @font-face {
   font-family: "Soyuz Grotesk";
-  src: url(/transportCompony/font/SoyuzGroteskBold.ttf);
+  src: url(/transportCompany/font/SoyuzGroteskBold.ttf);
 }
 
 @font-face {
   font-family: "Gilroy";
-  src: url(/transportCompony/font/Gilroy-Regular_0.ttf);
+  src: url(/transportCompany/font/Gilroy-Regular_0.ttf);
 }
 
 html,
