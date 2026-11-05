@@ -1,0 +1,384 @@
+.innovative {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.innovative__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 110px;
+}
+.innovative__img {
+  width: 440px;
+  height: 440px;
+}
+.innovative__content {
+  max-width: 800px;
+  color: var(--chernyy);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+.content__num {
+  position: relative;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 75%;
+  color: #60c880;
+}
+
+.content__num::after {
+  position: absolute;
+  content: "";
+  left: 77px;
+  bottom: 20px;
+  width: 70px;
+  height: 1px;
+  background-color: #60c880;
+}
+.innovative__title {
+  margin-top: 20px;
+  font-size: 60px;
+  line-height: 75%;
+}
+.innovative__descr {
+  margin-top: 15px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 170%;
+}
+.btn {
+}
+.innovative__btn {
+  margin-top: 20px;
+}
+
+/* =========================================================
+   АДАПТИВ — ИННОВАЦИОННЫЕ ТРАНСПОРТНЫЕ СИСТЕМЫ
+   ========================================================= */
+
+/* ---------- ≤ 1280px: ноутбуки ---------- */
+@media (max-width: 1280px) {
+  .innovative__inner {
+    gap: 70px;
+  }
+
+  .innovative__img {
+    width: 400px;
+    height: 400px;
+    flex-shrink: 0;
+  }
+
+  .innovative__content {
+    max-width: 640px;
+  }
+
+  .content__num {
+    font-size: 52px;
+  }
+
+  .innovative__title {
+    font-size: 52px;
+  }
+
+  .innovative__descr {
+    font-size: 18px;
+    line-height: 160%;
+  }
+}
+
+/* ---------- ≤ 1024px: планшеты ---------- */
+@media (max-width: 1024px) {
+  .innovative {
+    margin-top: 60px;
+  }
+
+  .innovative__inner {
+    gap: 40px;
+    align-items: flex-start;
+  }
+
+  .innovative__img {
+    width: 340px;
+    height: 340px;
+  }
+
+  .innovative__content {
+    max-width: 100%;
+    gap: 16px;
+  }
+
+  .content__num {
+    font-size: 44px;
+  }
+
+  .content__num::after {
+    width: 50px;
+    left: 46px;
+    bottom: 15px;
+  }
+
+  .innovative__title {
+    margin-top: 12px;
+    font-size: 42px;
+    line-height: 85%;
+  }
+
+  .innovative__descr {
+    margin-top: 10px;
+    font-size: 17px;
+    line-height: 160%;
+  }
+
+  .innovative__btn {
+    margin-top: 12px;
+  }
+}
+
+/* ---------- ≤ 900px: маленькие планшеты ---------- */
+@media (max-width: 900px) {
+  .innovative {
+    margin-top: 50px;
+    padding-bottom: 60px;
+  }
+
+  .innovative__inner {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .innovative__img {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .innovative__content {
+    max-width: 100%;
+  }
+
+  .content__num {
+    font-size: 40px;
+  }
+
+  .content__num::after {
+    width: 46px;
+    left: 42px;
+    bottom: 14px;
+  }
+
+  .innovative__title {
+    font-size: 38px;
+    line-height: 90%;
+  }
+
+  .innovative__descr {
+    font-size: 16px;
+    line-height: 160%;
+  }
+
+  .innovative__btn {
+    margin-top: 10px;
+  }
+}
+
+/* ---------- ≤ 768px: крупные телефоны ---------- */
+@media (max-width: 768px) {
+  .innovative {
+    margin-top: 40px;
+    padding-bottom: 50px;
+  }
+
+  .innovative__inner {
+    gap: 28px;
+  }
+
+  .innovative__img {
+    max-width: 100%;
+  }
+
+  .content__num {
+    font-size: 36px;
+  }
+
+  .content__num::after {
+    width: 42px;
+    left: 38px;
+    bottom: 12px;
+  }
+
+  .innovative__title {
+    font-size: 34px;
+    line-height: 90%;
+  }
+
+  .innovative__descr {
+    font-size: 15px;
+    line-height: 155%;
+  }
+}
+
+/* ---------- ≤ 640px: телефоны ---------- */
+@media (max-width: 640px) {
+  .innovative {
+    margin-top: 36px;
+    padding-bottom: 45px;
+  }
+
+  .innovative__inner {
+    gap: 24px;
+  }
+
+  .content__num {
+    font-size: 32px;
+  }
+
+  .content__num::after {
+    width: 36px;
+    left: 34px;
+    bottom: 11px;
+  }
+
+  .innovative__title {
+    margin-top: 14px;
+    font-size: 30px;
+    line-height: 95%;
+  }
+
+  .innovative__descr {
+    margin-top: 8px;
+    font-size: 15px;
+    line-height: 150%;
+  }
+
+  .innovative__btn {
+    margin-top: 8px;
+  }
+}
+
+/* ---------- ≤ 480px: маленькие телефоны ---------- */
+@media (max-width: 480px) {
+  .innovative {
+    margin-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  .innovative__inner {
+    gap: 20px;
+  }
+
+  .innovative__img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .innovative__content {
+    gap: 14px;
+  }
+
+  .content__num {
+    font-size: 28px;
+  }
+
+  .content__num::after {
+    width: 32px;
+    left: 30px;
+    bottom: 10px;
+  }
+
+  .innovative__title {
+    margin-top: 12px;
+    font-size: 26px;
+    line-height: 100%;
+  }
+
+  .innovative__descr {
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+  .innovative__btn {
+    margin-top: 6px;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ---------- ≤ 375px: очень маленькие телефоны ---------- */
+@media (max-width: 375px) {
+  .innovative {
+    margin-top: 43px;
+    padding-bottom: 70px;
+  }
+
+  .innovative__inner {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .innovative__img {
+    width: 100%;
+    max-width: 335px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .content__num {
+    font-size: 30px;
+  }
+
+  .content__num::after {
+    width: 40px;
+    left: 40px;
+    bottom: 13px;
+  }
+
+  .innovative__title {
+    font-size: 36px;
+    line-height: 75%;
+  }
+
+  .innovative__descr {
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  .innovative__btn {
+    margin: 0;
+  }
+}
+
+/* ---------- ≤ 320px: самые маленькие ---------- */
+@media (max-width: 320px) {
+  .innovative {
+    margin-top: 25px;
+    padding-bottom: 30px;
+  }
+
+  .innovative__inner {
+    gap: 16px;
+  }
+
+  .content__num {
+    font-size: 24px;
+  }
+
+  .content__num::after {
+    width: 28px;
+    left: 26px;
+    bottom: 9px;
+  }
+
+  .innovative__title {
+    font-size: 22px;
+    line-height: 105%;
+  }
+
+  .innovative__descr {
+    font-size: 13px;
+    line-height: 145%;
+  }
+}

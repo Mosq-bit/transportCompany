@@ -1,0 +1,166 @@
+.work {
+  color: var(--chernyy);
+  padding-bottom: 180px;
+}
+
+.work__content-num::after {
+    left: 104px;
+    bottom: 32px;
+}
+
+.work__list {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1px;
+  background: #d9d9d9;
+  border: 1px solid #d9d9d9;
+}
+
+.work__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 36px 37px;
+  background: #fff;
+}
+
+.work__item-pic {
+  width: 186px;
+  height: 85px;
+  object-fit: contain;
+  display: block;
+}
+
+.work__item-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* ---------- Ноутбук / маленький десктоп ---------- */
+@media (max-width: 1439px) {
+  .work {
+    padding-bottom: 140px;
+  }
+
+  .work__list {
+    margin-top: 40px;
+  }
+
+  .work__item {
+    padding: 28px 24px;
+  }
+
+  .work__item-pic {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+  }
+}
+
+/* ---------- Планшет: 3 колонки ---------- */
+@media (max-width: 1023px) {
+  .work {
+    padding-bottom: 100px;
+  }
+
+  .work__list {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 35px;
+  }
+
+  .work__item {
+    padding: 24px 20px;
+  }
+
+  .work__item-pic {
+    max-width: 140px;
+  }
+}
+
+/* ---------- Большой телефон / маленький планшет: 2 колонки ---------- */
+@media (max-width: 767px) {
+  .work {
+    padding-bottom: 80px;
+  }
+
+  .work__list {
+    display: grid;              /* возвращаем grid, отменяем flex */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: #d9d9d9;
+    border: 1px solid #d9d9d9;
+    margin-top: 30px;
+    overflow: visible;
+    scroll-snap-type: none;
+    padding-bottom: 0;
+  }
+
+  /* отменяем слайдерные стили, если они были */
+  .work__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .work__item {
+    flex: initial;
+    padding: 22px 18px;
+    border: none;
+    scroll-snap-align: none;
+  }
+
+  .work__item:last-child {
+    border-right: none;
+  }
+
+  .work__item-pic {
+    max-width: 130px;
+  }
+}
+
+/* ---------- Маленький телефон: слайдер в одну строку ---------- */
+@media (max-width: 480px) {
+  .work {
+    padding-bottom: 80px;
+  }
+
+  .work__list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0;
+    background: none;
+    border: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 0 12px;
+    margin-top: 30px;
+    scrollbar-width: thin;
+  }
+
+  .work__list::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .work__list::-webkit-scrollbar-thumb {
+    background: #d9d9d9;
+    border-radius: 2px;
+  }
+
+  .work__item {
+    flex: 0 0 200px;
+    scroll-snap-align: start;
+    border: 1px solid #d9d9d9;
+    border-right: none;
+    padding: 24px 20px;
+  }
+
+  .work__item:last-child {
+    border-right: 1px solid #d9d9d9;
+  }
+
+  .work__item-pic {
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+  }
+}

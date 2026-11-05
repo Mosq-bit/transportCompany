@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПО Транспортная компания</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <header class="hero">
+
+      <div class="header__inner">
+
+        <!-- Логотип -->
+        <a href="#" class="header__logo-link">
+          <img src="/assets/logo.svg" alt="Логотип компании">
+        </a>
+
+        <!-- Телефон (только мобильные) -->
+        <a href="tel:+79000000000" class="header__mobile-phone">
+
+          +7 (900) 000-00-00
+        </a>
+
+        <div class="header__nav">
+          <ul class="header__nav-list" id="navList">
+            <li class="header__nav-item header__nav-item--dropdown">
+              <button type="button"
+                class="header__nav-link header__nav-link--toggle"
+                aria-expanded="false"
+                aria-haspopup="true">
+                Услуги
+                <svg class="header__nav-arrow" width="10" height="6"
+                  viewBox="0 0 10 6" fill="none">
+                  <path d="M1 1L5 5L9 1" stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+
+              <ul class="header__submenu">
+                <li><a href="/services/web"
+                    class="header__submenu-link">Разработка сайтов</a></li>
+                <li><a href="/services/seo"
+                    class="header__submenu-link">SEO-продвижение</a></li>
+                <li><a href="/services/ads"
+                    class="header__submenu-link">Реклама</a></li>
+                <li><a href="/services/design"
+                    class="header__submenu-link">Дизайн</a></li>
+              </ul>
+            </li>
+
+            <li class="header__nav-item"><a href="/company.html"
+                class="header__nav-link">О
+                компании</a></li>
+            <li class="header__nav-item"><a href="#"
+                class="header__nav-link">Блог</a></li>
+            <li class="header__nav-item"><a href="#"
+                class="header__nav-link">Контакты</a></li>
+          </ul>
+
+          <form class="search" id="searchForm">
+            <input type="text" class="search__input" placeholder="Что ищем?"
+              name="q">
+            <button type="button" class="search__btn" id="searchBtn"
+              aria-label="Открыть поиск">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M2.00028 9.77778C2.00028 14.0733 5.48251 17.5556 9.77806 17.5556C11.5681 17.5556 13.217 16.9508 14.5314 15.9345L15.9348 14.5311C16.9511 13.2167 17.5558 11.5678 17.5558 9.77778C17.5558 5.48223 14.0736 2 9.77806 2C5.48251 2 2.00028 5.48223 2.00028 9.77778ZM17.5022 15.7737C18.7894 14.1179 19.5558 12.0374 19.5558 9.77778C19.5558 4.37766 15.1782 0 9.77806 0C4.37794 0 0.00028038 4.37766 0.00028038 9.77778C0.00028038 15.1779 4.37794 19.5556 9.77806 19.5556C12.0375 19.5556 14.118 18.7892 15.7737 17.5021L20.2715 21.9999L22 20.2715L17.5022 15.7737Z"
+                  fill="currentColor" />
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- Контакты -->
+        <div class="header__contacts">
+          <div class="header__lang">
+            <img src="/assets/lan.png" alt="Сменить язык">
+          </div>
+
+          <a href="tel:+79000000000" class="header__phone">
+            <span class="header__phone-icon">
+              <img src="/assets/tel.png" alt>
+            </span>
+            +7 (900) 000-00-00
+          </a>
+        </div>
+
+        <!-- RU + бургер (только мобильные) -->
+        <div class="header__mobile-right">
+          <a href="/en" class="header__mobile-lang">RU</a>
+
+          <button class="burger" id="burger" aria-label="Открыть меню"
+            aria-expanded="false">
+            <span class="burger__icon">
+              <span></span>
+              <span></span>
+            </span>
+          </button>
+        </div>
+
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="container hero__content-wrap">
+        <div class="header__content">
+          <h1 class="header__title">
+            Помогаем <br> быть <span>первыми</span>
+          </h1>
+          <p class="header__title-mob">
+            Помогаем быть <br> <span>первыми</span>
+          </p>
+          <p class="header__descr">
+            Интегрированная система анализа бизнес-процессов транспортных
+            компаний различного профиля (пассажирские и грузовые перевозки)
+          </p>
+          <a href="#form" class="btn header__btn">Отправить заявку</a>
+        </div>
+      </div>
+
+      <a href="javascript:void(0)" class="hero__scroll"
+        aria-label="Прокрутить вниз" onclick="smoothScrollBy(300, 1200)">
+        <svg viewBox="0 0 150 150" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <circle cx="75" cy="75" r="75" fill="#60C880" />
+          <path
+            d="M76.1998 61.25V86.1869L84.9309 76.6381C85.3881 76.1381 86.1477 76.1187 86.6277 76.595C87.1071 77.0706 87.1263 77.8619 86.6691 78.3625L76.6972 89.2675C76.2436 89.7394 75.6412 90 74.9999 90C74.3591 90 73.7561 89.7394 73.2827 89.2456L63.3312 78.3619C63.1098 78.12 63 77.81 63 77.5C63 77.17 63.1248 76.84 63.3726 76.5944C63.8526 76.1181 64.6116 76.1375 65.0688 76.6375L73.7999 86.2262V61.25C73.7999 60.56 74.3375 60 74.9999 60C75.6622 60 76.1998 60.56 76.1998 61.25Z"
+            fill="white" stroke="white" stroke-width="0.5" />
+        </svg>
+      </a>
+
+    </header>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <main>
+      <section class="innovative" id="innovative">
+        <div class="container">
+          <div class="innovative__inner">
+            <img class="innovative__img" src="/assets/innovatione__img.jpg" alt>
+            <div class="innovative__content">
+              <span class="content__num">01</span>
+              <h3 class="innovative__title content__title">Инновационные
+                транспортные
+                системы</h3>
+              <p class="innovative__descr">ООО "ИТС" находится на переднем крае
+                IT-инноваций в транспортной отрасли. Мы предлагаем комплексные и
+                адаптированные под отраслевые нужды решения, от проектирования и
+                разработки программного обеспечения до его внедрения и
+                поддержки. Наше программное обеспечение помогает транспортным
+                компаниям повысить их эффективность, безопасность и качество
+                обслуживания.</p>
+              <p class="innovative__descr">Мы в ООО "ИТС" верим в силу инноваций
+                и стремимся к тому, чтобы наши клиенты всегда оставались на шаг
+                впереди конкурентов. Наша цель - предоставить вам инструменты
+                для преодоления любых вызовов, с которыми вы сталкиваетесь, с
+                помощью передовых технологий.
+                Мы помогаем быть первыми!</p>
+
+              <a href="#" class="btn innovative__btn">Подробнее о нас</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services">
+        <div class="container">
+          <div class="services__content">
+            <span class="content__num services__content-num">02</span>
+            <h3 class="content__title services__title">Наши услуги</h3>
+            <ul class="serivices__list">
+              <li class="services__item">
+                <span class="card-num services__card-num">01</span>
+
+                <div class="services__card">
+                  <p class="services__card-title">ПО по учету горюче-смазочных
+                    материалов (ГСМ)</p>
+                  <p class="services__card-descr content__descr">Наше
+                    программное обеспечение
+                    по учету горюче-смазочных материалов (ГСМ) для транспортных
+                    компаний представляет собой комплексное решение,
+                    направленное на контроль, анализ и оптимизацию расходов на
+                    топливо.</p>
+                  <a href="#" class="services__card-link">подробнее <span>об
+                      услуге</span>
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1.75 22.5833L22.5833 1.75M22.5833 20.5V1.75H3.83333"
+                        stroke="#60C880" stroke-width="3.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </a>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </section>
+      <div class="dark__block">
+        <div class="container">
+          <ul class="services__list services__list-dark">
+            <li class="services__item services__item-dark">
+              <span class="card-num services__card-num">02</span>
+
+              <div class="services__card">
+                <p class="services__card-title">ПО по учету заработной платы
+                  водителей</p>
+                <p class="services__card-descr content__descr ">Программное
+                  обеспечение по
+                  учету заработной платы водителей для транспортных компаний
+                  включает в себя несколько ключевых компонентов, направленных
+                  на автоматизацию и оптимизацию процессов начисления и
+                  выплаты заработной платы.</p>
+                <a href="#" class="services__card-link">подробнее <span>об
+                    услуге</span>
+                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1.75 22.5833L22.5833 1.75M22.5833 20.5V1.75H3.83333"
+                      stroke="#60C880" stroke-width="3.5"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+            </li>
+            <li class="services__item services__item-dark">
+              <span class="card-num services__card-num">03</span>
+
+              <div class="services__card">
+                <p class="services__card-title">ПО по учету и уменьшению
+                  порожнего пробега</p>
+                <p class="services__card-descr content__descr">ПО по учету и
+                  уменьшению
+                  порожнего (холостого) пробега для транспортных компаний
+                  представляет собой комплексное решение, нацеленное на
+                  оптимизацию логистических процессов и минимизацию
+                  непродуктивных расходов, связанных с перевозками.</p>
+                <a href="#" class="services__card-link">подробнее <span>об
+                    услуге</span>
+                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1.75 22.5833L22.5833 1.75M22.5833 20.5V1.75H3.83333"
+                      stroke="#60C880" stroke-width="3.5"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+            </li>
+          </ul>
+          <a href="po__services.html" class="services__link">Смотреть больше
+            услуг</a>
+        </div>
+
+        <section class="stage">
+          <div class="container">
+            <div class="stage__inner">
+              <span class="content__num stage__num">03</span>
+              <h3 class="content__title stage__title">Этапы работы</h3>
+              <div class="stage__cards">
+                <div class="stage__card">
+                  <span class="card-num stage__card-num">01</span>
+                  <div class="stage__card-content">
+
+                    <h4
+                      class="stage__card-title content__title">Анализируем</h4>
+                    <p class="stage__card-descr content__descr">бизнес-модель
+                      клиента и
+                      связанные с ней процессы</p>
+                  </div>
+                </div>
+                <div class="stage__card">
+                  <span class="card-num stage__card-num">02</span>
+                  <div class="stage__card-content">
+                    <h4 class="stage__card-title">Моделируем</h4>
+                    <p class="stage__card-descr">как должно быть все
+                      организовано,
+                      как команда закончит работу</p>
+                  </div>
+                </div>
+                <div class="stage__card">
+                  <span class="card-num stage__card-num">03</span>
+                  <div class="stage__card-content">
+
+                    <h4 class="stage__card-title">Планируем</h4>
+                    <p class="stage__card-descr">этапы реализации вашего
+                      проекта</p>
+                  </div>
+                </div>
+                <div class="stage__card">
+                  <span class="card-num stage__card-num">04</span>
+                  <div class="stage__card-content">
+                    <h4 class="stage__card-title">Продумываем</h4>
+                    <p class="stage__card-descr">удобный и функциональный
+                      интерфейс</p>
+                  </div>
+                </div>
+                <div class="stage__card">
+                  <span class="card-num stage__card-num">05</span>
+                  <div class="stage__card-content">
+
+                    <h4 class="stage__card-title">Разрабатываем</h4>
+                    <p class="stage__card-descr">тестируем и сдаем проект
+                      этапами
+                      в контрольных точках</p>
+                  </div>
+                </div>
+                <div class="stage__card">
+                  <span class="card-num stage__card-num">06</span>
+                  <div class="stage__card-content">
+
+                    <h4 class="stage__card-title">Внедряем</h4>
+                    <p class="stage__card-descr">обслуживаем и помогаем освоить
+                      ваш продукт</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="why">
+        <div class="container">
+          <div class="why__inner">
+            <div class="why__content">
+
+              <span class="content__num why__content-num">04</span>
+              <h3 class="why__title content__title">Почему нас выбирают</h3>
+              <p class="why__descr content__descr">
+                Хотите вывести свой бизнес на новый уровень? Мы предлагаем вам
+                решение для автоматизации процессов, которое увеличит
+                производительность и обеспечит технологическую независимость.
+                Доверьтесь нам и откройте новые горизонты для вашего бизнеса!
+              </p>
+              <button class="why__btn">отправить заявку</button>
+            </div>
+            <div class="why__visual">
+              <div class="orbit">
+
+                <!-- центральный круг -->
+                <div class="orbit__center">
+                  <h3 class="orbit__title">Практический опыт</h3>
+                  <p class="orbit__text">
+                    Мы запустили несколько приложений,
+                    доказавших свою эффективность
+                  </p>
+                </div>
+
+                <!-- иконки по орбите -->
+                <div class="orbit__icon orbit__icon--top">
+                  <img src="/assets/top.svg" alt>
+                </div>
+                <div class="orbit__icon orbit__icon--right">
+                  <img src="assets/right.svg" alt>
+                </div>
+                <div class="orbit__icon orbit__icon--bottom">
+                  <img src="/assets/bottom.svg" alt>
+                </div>
+                <div class="orbit__icon orbit__icon--left">
+                  <!-- кольцо прогресса -->
+                  <svg class="progress-ring" viewBox="0 0 112 112"
+                    aria-hidden="true">
+                    <!-- фоновая обводка (серое кольцо) -->
+                    <circle cx="56" cy="56" r="54"
+                      fill="none" stroke="#d9d9d9" stroke-width="1" />
+
+                    <!-- прогресс -->
+                    <circle class="progress-ring__circle"
+                      cx="56" cy="56" r="54"
+                      fill="none" stroke="#5cc47a" stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-dasharray="490.29"
+                      stroke-dashoffset="254.47"
+                      transform="rotate(-90 56 56)" />
+                  </svg>
+
+                  <!-- иконка по центру -->
+                  <img src="/assets/left.svg" alt>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="work">
+        <div class="container">
+          <span class="content__num work__content-num">05</span>
+          <h3 class="work__title content__title">С нами работают</h3>
+          <ul class="work__list">
+            <li class="work__item"><img src="/assets/pek.png" alt
+                class="work__item-pic"><a href="#"
+                class="work__item-link"></a></li>
+            <li class="work__item"><img src="/assets/image 4.svg" alt
+                class="work__item-pic"><a href="#"
+                class="work__item-link"></a></li>
+            <li class="work__item"><img src="/assets/pek.png" alt
+                class="work__item-pic"><a href="#"
+                class="work__item-link"></a></li>
+            <li class="work__item"><img src="/assets/image 4.svg" alt
+                class="work__item-pic"><a href="#"
+                class="work__item-link"></a></li>
+            <li class="work__item"><img src="/assets/pek.png" alt
+                class="work__item-pic"><a href="#"
+                class="work__item-link"></a></li>
+            <li class="work__item"><img src="/assets/image 4.svg" alt
+                class="work__item-pic"><a href="#"
+                class="work__item-link"></a></li>
+            <li class="work__item"><img src="/assets/pek.png" alt
+                class="work__item-pic"><a href="#"
+                class="work__item-link"></a></li>
+            <li class="work__item"><img src="/assets/image 4.svg" alt
+                class="work__item-pic"><a href="#"
+                class="work__item-link"></a></li>
+            <li class="work__item"><img src="/assets/pek.png" alt
+                class="work__item-pic"><a href="#"
+                class="work__item-link"></a></li>
+            <li class="work__item"><img src="/assets/image 4.svg" alt
+                class="work__item-pic"><a href="#"
+                class="work__item-link"></a></li>
+            <li class="work__item"><img src="/assets/pek.png" alt
+                class="work__item-pic"><a href="#"
+                class="work__item-link"></a></li>
+            <li class="work__item"><img src="/assets/image 4.svg" alt
+                class="work__item-pic"><a href="#"
+                class="work__item-link"></a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="tehnology">
+        <div class="container">
+          <span class="content__num tehnology__content-num">06</span>
+          <h3 class="tehnology__title content__title">Стек технологий</h3>
+          <div class="tehnology__groups">
+            <div class="tehnology__group">
+              <h4 class="tehnology__list-title">Frontend</h4>
+              <ul class="tehnology__list">
+                <li class="tehnology__item"><a href="#"
+                    class="tehnology__link"><img src="assets/svelte.png" alt
+                      class="tehnology__item-pic"></a></li>
+                <li class="tehnology__item"><a href="#"
+                    class="tehnology__link"><img src="/assets/vue.png" alt
+                      class="tehnology__item-pic"></a></li>
+                <li class="tehnology__item"><a href="#"
+                    class="tehnology__link"><img src="/assets/angular.png" alt
+                      class="tehnology__item-pic"></a></li>
+              </ul>
+            </div>
+            <div class="tehnology__group">
+              <h4 class="tehnology__list-title">Backend</h4>
+              <ul class="tehnology__list">
+                <li class="tehnology__item"><a href="#"
+                    class="tehnology__link"><img src="assets/laravel.png" alt
+                      class="tehnology__item-pic"></a></li>
+                <li class="tehnology__item"><a href="#"
+                    class="tehnology__link"><img src="/assets/python.png" alt
+                      class="tehnology__item-pic"></a></li>
+              </ul>
+            </div>
+            <div class="tehnology__group">
+              <h4 class="tehnology__list-title">Базы данных</h4>
+              <ul class="tehnology__list">
+                <li class="tehnology__item"><a href="#"
+                    class="tehnology__link"><img src="assets/mongo.png" alt
+                      class="tehnology__item-pic"></a></li>
+                <li class="tehnology__item"><a href="#"
+                    class="tehnology__link"><img src="/assets/sql.png" alt
+                      class="tehnology__item-pic"></a></li>
+                <li class="tehnology__item"><a href="#"
+                    class="tehnology__link"><img src="/assets/ch.png" alt
+                      class="tehnology__item-pic"></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="tehnology__groups  tehnology__groups-bottom">
+            <div class="tehnology__group">
+              <h4 class="tehnology__list-title">Моб. приложения</h4>
+              <ul class="tehnology__list">
+                <li class="tehnology__item"><a href="#"
+                    class="tehnology__link"><img src="assets/java.png" alt
+                      class="tehnology__item-pic"></a></li>
+                <li class="tehnology__item"><a href="#"
+                    class="tehnology__link"><img src="/assets/swift.png" alt
+                      class="tehnology__item-pic"></a></li>
+              </ul>
+            </div>
+            <div class="tehnology__group tehnology__group-info">
+              <h4 class="tehnology__list-title">Инфраструктура</h4>
+              <ul class="tehnology__list">
+                <li class="tehnology__item"><a href="#"
+                    class="tehnology__link"><img src="assets/docer.png" alt
+                      class="tehnology__item-pic"></a></li>
+                <li class="tehnology__item"><a href="#"
+                    class="tehnology__link"><img src="/assets/ic.png" alt
+                      class="tehnology__item-pic"></a></li>
+              </ul>
+            </div>
+            <div class="tehnology__group">
+              <h4 class="tehnology__list-title">Применяем</h4>
+              <ul class="tehnology__list">
+                <li class="tehnology__item"><a href="#"
+                    class="tehnology__link"><img src="assets/ql.png" alt
+                      class="tehnology__item-pic"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="green__block">
+        <section class="news">
+          <div class="container">
+            <div class="news__head">
+              <div>
+                <span class="content__num news__content-num">07</span>
+                <h3 class="news__title content__title">Новости</h3>
+              </div>
+              <div class="news__nav">
+                <button class="news__btn news__btn--prev" aria-label="Назад"
+                  disabled></button>
+                <button class="news__btn news__btn--next"
+                  aria-label="Вперёд"></button>
+              </div>
+            </div>
+            <div class="news__slider">
+              <div class="news__slide">
+                <img src="/assets/slide-1.png" alt class="news__slide-pic">
+                <div class="news__content">
+
+                  <p class="news__slide-date">03.04.2023</p>
+                  <p class="news__slide-descr">Обзор рынка заказной разработки
+                    от
+                    Tadviser</p>
+                </div>
+              </div>
+              <div class="news__slide">
+                <img src="/assets/slide-2.png" alt class="news__slide-pic">
+                <div class="news__content">
+
+                  <p class="news__slide-date">03.04.2023</p>
+                  <p class="news__slide-descr">Обзор рынка заказной разработки
+                    от
+                    Tadviser</p>
+                </div>
+              </div>
+              <div class="news__slide">
+                <img src="/assets/slide-3.png" alt class="news__slide-pic">
+                <div class="news__content">
+
+                  <p class="news__slide-date">03.04.2023</p>
+                  <p class="news__slide-descr">Обзор рынка заказной разработки
+                    от
+                    Tadviser</p>
+                </div>
+              </div>
+              <div class="news__slide">
+                <img src="/assets/slide-1.png" alt class="news__slide-pic">
+                <div class="news__content">
+
+                  <p class="news__slide-date">03.04.2023</p>
+                  <p class="news__slide-descr">Обзор рынка заказной разработки
+                    от
+                    Tadviser</p>
+                </div>
+              </div>
+              <div class="news__slide">
+                <img src="/assets/slide-2.png" alt class="news__slide-pic">
+                <div class="news__content">
+
+                  <p class="news__slide-date">03.04.2023</p>
+                  <p class="news__slide-descr">Обзор рынка заказной разработки
+                    от
+                    Tadviser</p>
+                </div>
+              </div>
+              <div class="news__slide">
+                <img src="/assets/slide-3.png" alt class="news__slide-pic">
+
+                <div class="news__content">
+
+                  <p class="news__slide-date">03.04.2023</p>
+                  <p class="news__slide-descr">Обзор рынка заказной разработки
+                    от
+                    Tadviser</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="questions">
+          <div class="container">
+            <span class="content__num questions__content-num">08</span>
+            <h3 class="questions__title content__title">Остались вопросы?</h3>
+            <p class="content__descr questions__descr">Оставьте заявку, и наш
+              менеджер свяжется с
+              вами прямо сейчас!</p>
+            <form class="question__form" action="/api/send" method="POST">
+              <input
+                class="question__form-input"
+                id="user-name"
+                type="text"
+                name="name"
+                placeholder="Ваше имя"
+                autocomplete="name"
+                required>
+
+              <input
+                class="question__form-input"
+                id="phone"
+                type="tel"
+                name="phone"
+                placeholder="Контактный телефон"
+                autocomplete="tel"
+                required>
+
+              <button type="submit" class="question__btn">Отправить
+                заявку</button>
+            </form>
+            <p class="question__politic">Соглашаюсь с <span>Политикой обработки
+                персональных данных</span></p>
+          </div>
+        </section>
+      </div>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__inner">
+            <div class="footer__services">
+              <p class="footer__title">Услуги</p>
+              <ul class="footer__list">
+                <li class="footer__item"><a href="#"
+                    class="footer__link">ПО по учету горюче-смазочных
+                    материалов (ГСМ)</a></li>
+                <li class="footer__item"><a href="#"
+                    class="footer__link">ПО по учету заработной платы
+                    водителям</a></li>
+                <li class="footer__item"><a href="#"
+                    class="footer__link">ПО по учету и уменьшению
+                    порожнего пробега</a></li>
+              </ul>
+            </div>
+            <div class="footer__company">
+              <p class="footer__title">Компания</p>
+              <ul class="footer__list">
+                <li class="footer__item"><a href="#"
+                    class="footer__link">О компании</a></li>
+                <li class="footer__item"><a href="#"
+                    class="footer__link">Блог</a></li>
+                <li class="footer__item"><a href="#"
+                    class="footer__link">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="footer__contact">
+              <p class="footer__title">Контакты</p>
+              <a class="footer__tel" href="tel:+79000000000">+7 (900)
+                000-00-00</a>
+              <a class="footer__mail"
+                href="mailto:example@mail.ru">example@mail.ru</a>
+              <button class="footer__btn" id="openModalBtn"
+                type="button">Обратный звонок</button>
+
+              <div id="myModal" class="modal">
+                <div class="modal__content">
+                  <span class="close__btn">&times;</span>
+                  <h2>Заказать звонок</h2>
+                  <form class="footer__form" action="/api/send"
+                    method="POST">
+                    <input
+                      class="footer__form-input"
+                      id="modal-user-name"
+                      type="text"
+                      name="name"
+                      placeholder="Ваше имя"
+                      autocomplete="name"
+                      required>
+
+                    <input
+                      class="footer__form-input"
+                      id="modal-phone"
+                      type="tel"
+                      name="phone"
+                      placeholder="Контактный телефон"
+                      autocomplete="tel"
+                      required>
+
+                    <button type="submit"
+                      class="question__btn footer__btn">Отправить
+                      заявку</button>
+                  </form>
+
+                  <a>Соглашаюсь с <span>Политикой обработки персональных
+                      данных</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="divaider"></div>
+        <div class="container">
+
+          <div class="footer__copy">
+            <p>© Copyright 2014 - 2024. ООО «ИТС»</p>
+            <p class="footer__policy">Политика конфеденциальности</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <div class="mobile-menu" id="mobileMenu">
+
+      <div class="mobile-menu__top">
+        <a href="#" class="header__logo-link">
+          <img src="/assets/mob__logo.png" alt="Логотип компании">
+        </a>
+
+        <a href="tel:+79000000000" class="mobile-menu__phone">
+          +7 (900) 000-00-00
+        </a>
+
+        <div class="mobile-menu__right">
+          <a href="/en" class="mobile-menu__lang">RU</a>
+          <button class="mobile-menu__close" id="menuClose"
+            aria-label="Закрыть меню">
+            <svg viewBox="0 0 12 12" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L11 11M11 1L1 11" stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <form class="mobile-menu__search" onsubmit="return false;">
+        <input type="text" placeholder="Поиск" aria-label="Поиск по сайту">
+        <button type="submit" aria-label="Найти">
+          <svg viewBox="0 0 22 22" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M2.00028 9.77778C2.00028 14.0733 5.48251 17.5556 9.77806 17.5556C11.5681 17.5556 13.217 16.9508 14.5314 15.9345L15.9348 14.5311C16.9511 13.2167 17.5558 11.5678 17.5558 9.77778C17.5558 5.48223 14.0736 2 9.77806 2C5.48251 2 2.00028 5.48223 2.00028 9.77778ZM17.5022 15.7737C18.7894 14.1179 19.5558 12.0374 19.5558 9.77778C19.5558 4.37766 15.1782 0 9.77806 0C4.37794 0 0.00028038 4.37766 0.00028038 9.77778C0.00028038 15.1779 4.37794 19.5556 9.77806 19.5556C12.0375 19.5556 14.118 18.7892 15.7737 17.5021L20.2715 21.9999L22 20.2715L17.5022 15.7737Z"
+              fill="currentColor" />
+          </svg>
+        </button>
+      </form>
+
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item mobile-menu__item--dropdown">
+          <button type="button" class="mobile-menu__link"
+            aria-expanded="false">
+            Услуги
+            <svg viewBox="0 0 8 12" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L6 6L1 11" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <ul class="mobile-menu__submenu">
+            <li><a href="/services/web"
+                class="mobile-menu__submenu-link">Разработка сайтов</a></li>
+            <li><a href="/services/seo"
+                class="mobile-menu__submenu-link">SEO-продвижение</a></li>
+            <li><a href="/services/ads"
+                class="mobile-menu__submenu-link">Реклама</a></li>
+            <li><a href="/services/design"
+                class="mobile-menu__submenu-link">Дизайн</a></li>
+          </ul>
+        </li>
+
+        <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">О
+            компании</a></li>
+        <li class="mobile-menu__item"><a href="#"
+            class="mobile-menu__link">Блог</a></li>
+        <li class="mobile-menu__item"><a href="#"
+            class="mobile-menu__link">Контакты</a></li>
+      </ul>
+
+      <div class="mobile-menu__footer">
+        <a href="#form" class="btn mobile-menu__btn">Отправить заявку</a>
+      </div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,156 @@
+.stage {
+  margin-top: 180px;
+
+
+}
+
+.stage__title {
+  margin-top: 40px;
+  color: var(--belyy);
+}
+.stage__cards {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.stage__card {
+  padding: 50px 45px 49px 45px;
+  background: var(--belyy);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border: 1px solid #d9d9d9;
+}
+
+.stage__num::after {
+  top: 40%;
+  left: 126%;
+
+}
+.stage__card-content{
+  margin-top: 10px;
+}
+.stage__card-title {
+  margin-top: 0;
+  font-size: 36px;
+  line-height: 75%;
+  color: var(--chernyy);
+}
+.stage__card-descr {
+  margin-top: 10px;
+  font-family: var(--second-family);
+
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--chernyy);
+}
+
+@media (max-width: 375px) {
+  .stage {
+    margin-top: 170px;
+  }
+  .stage__num {
+  }
+  .content__title {
+    margin-top: 20px;
+    font-size: 30px;
+    line-height: 75%;
+  }
+  .stage__cards {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .stage__card {
+    padding: 30px 23px 29px 20px;
+    gap: 10px;
+    flex-direction: row;
+  }
+  .stage__card-num {
+    
+    font-size: 16px;
+    padding: 14px 7px;
+    width: 40px;
+    height: 40px;
+  }
+  .stage__card-title {
+    font-size: 20px;
+  }
+  .stage__card-descr {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+
+/* ===== Планшеты и небольшие ноутбуки ===== */
+@media (max-width: 1024px) {
+  .stage {
+    margin-top: 140px;
+    padding-bottom: 60px;
+  }
+  .stage__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stage__card {
+    padding: 40px 30px;
+  }
+  .stage__card-title {
+    font-size: 30px;
+  }
+}
+
+/* ===== Небольшие планшеты / крупные телефоны ===== */
+@media (max-width: 768px) {
+  .stage {
+    margin-top: 120px;
+    padding-bottom: 50px;
+  }
+  .stage__title {
+    margin-top: 30px;
+  }
+  .stage__cards {
+    margin-top: 40px;
+    grid-template-columns: 1fr;
+  }
+  .stage__card {
+    padding: 35px 28px;
+  }
+  .stage__card-title {
+    font-size: 26px;
+  }
+}
+
+/* ===== Телефоны (шире вашего 375px) ===== */
+@media (max-width: 480px) {
+  .stage {
+    margin-top: 100px;
+    padding-bottom: 40px;
+  }
+  .stage__title {
+    margin-top: 20px;
+    font-size: 32px;
+  }
+  .stage__cards {
+    margin-top: 30px;
+  }
+  .stage__card {
+    padding: 30px 20px;
+    gap: 12px;
+  }
+  .stage__card-title {
+    font-size: 22px;
+  }
+  .stage__card-descr {
+    font-size: 16px;
+  }
+}
+
+/* ===== Большие экраны: ограничиваем чрезмерное растягивание ===== */
+@media (min-width: 1440px) {
+  .stage__cards {
+    gap: 20px;
+  }
+  .stage__card {
+    padding: 55px 50px;
+  }
+}

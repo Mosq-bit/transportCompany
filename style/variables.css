@@ -1,0 +1,19 @@
+:root {
+  --belyy: #fff;
+  --chernyy: #3d3d3d;
+  --firm-zelennyy: #60c880;
+  --firm-temno-zelennyy: #1b4452;
+  --firm-zelennyy-hover: #4fb36c;
+  --firm-seryy: #f3f3f3;
+
+  --font-family: "BigBang", sans-serif;
+  --second-family: "Geometria", sans-serif;
+  --third-family: "Inter", sans-serif;
+  --font3: "Soyuz Grotesk", sans-serif;
+  --font4: "Gilroy", sans-serif;
+}
+
+/* :hover{
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+} */

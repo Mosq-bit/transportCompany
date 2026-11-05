@@ -1,0 +1,258 @@
+.po__services {
+  padding-bottom: 100px;
+}
+.po__services-wrapper {
+  position: relative;
+}
+.po__services-title {
+  margin-bottom: 40px;
+}
+.po__services-toggle {
+  position: absolute;
+  right: -190px;
+  bottom: 30px;
+}
+
+.po__services-inner {
+  font-family: var(--second-family);
+  color: var(--chernyy);
+}
+.po__services__info {
+  width: 100%;
+}
+.po__services-descr {
+  margin-top: 40px;
+}
+.features {
+  margin-top: 55px;
+}
+.features__section-title {
+  margin-bottom: 10px;
+  font-family: var(--font-family);
+  font-size: 36px;
+  line-height: 75%;
+}
+.features__item {
+  margin-top: 35px;
+}
+.features__title {
+  font-family: var(--font-family);
+  font-size: 24px;
+  line-height: 75%;
+}
+.features__list {
+  margin-top: 25px;
+}
+.features__list-item {
+  position: relative;
+  margin-left: 24px;
+}
+.features__list-item::before {
+  position: absolute;
+  content: "";
+  top: 14px;
+  left: -24px;
+  border-radius: 2px;
+  width: 8px;
+  height: 8px;
+  background: var(--firm-zelennyy);
+}
+.feature__descr {
+  margin: 55px 0 35px;
+}
+
+.po__services-btn {
+  font-family: var(--font-family);
+  width: 100%;
+  line-height: 80%;
+  font-size: 18px;
+}
+
+/* ======================== НОУТБУК / МАЛЕНЬКИЙ ДЕСКТОП ======================== */
+@media (max-width: 1439px) {
+  .po__services-toggle {
+    right: -100px;
+  }
+}
+
+/* ======================== ПЛАНШЕТ ======================== */
+@media (max-width: 1023px) {
+  .po__services-title {
+    margin-bottom: 30px;
+  }
+
+  .po__services-toggle {
+    top: 10px;
+    right: -40px;
+  }
+
+  .features__section-title {
+    font-size: 30px;
+    line-height: 1.1;
+  }
+
+  .features__title {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  .features__item {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .po__services {
+    padding-bottom: 50px;
+  }
+  .po__services-toggle {
+    right: 0px;
+  }
+}
+@media (max-width: 767px) {
+  .po__services-wrapper {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .po__services-title {
+    margin-bottom: 0;
+    font-size: 26px;
+  }
+
+  .po__services-toggle {
+    padding: 12px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: #60c880;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    margin-top: 0;
+  }
+
+  .po__services-toggle svg {
+    width: 16px;
+    height: 16px;
+    border-radius: 15px;
+  }
+
+  .po__services-toggle svg rect {
+    fill: var(--belyy);
+  }
+
+  .po__services-descr {
+    margin-top: 24px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* Ограничиваем высоту картинки */
+  .po__services__info img {
+    height: auto;
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .features {
+    margin-top: 30px;
+  }
+
+  .features__section-title {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .features__title {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .features__list-item {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .feature__descr {
+    margin: 30px 0;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .po__services-btn {
+    font-size: 16px;
+    padding: 16px 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .po__services {
+    padding-bottom: 35px;
+  }
+  .po__services-wrapper {
+    padding-top: 75px;
+  }
+  .po__services-title {
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+
+  .po__services-toggle {
+    padding: 6px 12px 12px 12px;
+    width: 40px;
+    height: 40px;
+    right: 20px;
+    bottom: 120px;
+    border-radius: 100%;
+    background-color: #60c880;
+    fill: white;
+
+    svg {
+      border-radius: 15px;
+      width: 16px;
+      height: 16px;
+    }
+    svg rect {
+      fill: var(--belyy);
+      border-radius: 15px;
+    }
+  }
+  .po__services__info {
+    img {
+      height: 250px;
+    }
+  }
+  .po__services-descr {
+    margin-top: 30px;
+    font-size: 16px;
+  }
+  .features {
+    margin-top: 30px;
+  }
+  .features__section-title {
+    margin-bottom: 25px;
+    font-size: 22px;
+    line-height: 85%;
+  }
+  .features__item {
+    margin-top: 25px;
+  }
+  .features__list-item {
+    font-size: 16px;
+  }
+  .feature__descr {
+    margin: 30px 0;
+    font-size: 16px;
+  }
+  .po__services-btn {
+    font-size: 16px;
+  }
+}

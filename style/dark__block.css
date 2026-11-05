@@ -1,0 +1,29 @@
+.dark__block {
+  position: relative;
+
+  isolation: isolate;
+}
+
+.dark__block::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: #1b1e33;
+clip-path: polygon(0 19%, 100% 14%, 100% 83%, 0 92%);
+}
+
+.footer__dark-block::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: #1b1e33;
+clip-path: polygon(0 19%, 100% 14%, 100% 83%, 0 92%);
+}
+
+@media (max-width:375px) {
+    .dark__block::before{
+        clip-path: polygon(0 43%, 100% 40%, 100% 91%, 0 94%);
+    }
+}

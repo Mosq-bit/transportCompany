@@ -1,0 +1,282 @@
+.company {
+  padding: 77px 0 90px;
+}
+
+.company__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0;
+}
+
+.company__wrapper button {
+  position: absolute;
+  right: -190px;
+}
+
+.company__content {
+  margin-top: 35px;
+  font-size: 20px;
+  line-height: 1.7;
+  color: var(--chernyy);
+}
+
+.company__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid #d9d9d9;
+}
+
+.company__item {
+  padding: 40px 40px 35px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.company__item:last-of-type {
+  border-bottom: none;
+}
+
+.company__item-title {
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--chernyy);
+}
+
+.company__item-descr {
+  margin-top: 20px;
+  font-family: var(--second-family);
+  line-height: 1.7;
+}
+
+.company__text {
+  margin-top: 40px;
+  font-family: var(--second-family);
+}
+
+.company__text img {
+  margin: 40px 0;
+  width: 100%;
+  display: block;
+}
+
+.company__text p + p {
+  margin-top: 34px;
+}
+
+@media (max-width: 375px) {
+
+    .company{
+        padding: 75px 0 50px;
+    }
+  .container {
+    padding: 0;
+  }
+  .company__wrapper {
+    padding-left: 20px;
+  }
+  .company__wrapper button {
+    padding: 12px;
+    width: 40px;
+    height: 40px;
+    right: 20px;
+    bottom: 50px;
+    border-radius: 100%;
+    background-color: #60c880;
+    fill: white;
+
+    svg {
+      border-radius: 15px;
+      width: 16px;
+      height: 16px;
+    }
+  }
+  button svg rect {
+    fill: var(--belyy);
+    border-radius: 15px;
+  }
+  .company__content{
+    margin-top: 30px;
+  }
+  .company__list {
+    border-right: none;
+    border-left: none;
+  }
+  .company__item {
+    padding: 25px 20px 22px;
+  }
+  .company__item-title {
+    font-size: 20px;
+  }
+  .company__item-descr {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  .company__text {
+    padding: 0 20px;
+    font-size: 16px;
+
+    img{
+        margin: 28px 0 30px;
+        height: 250px;
+    }
+  }
+  .company__text p + p {
+  margin-top: 14px;
+}
+}
+@media (max-width: 1439px) {
+
+  .company__wrapper button {
+    right: -100px;
+  }
+}
+
+
+
+@media (max-width: 1023px) {
+  .company {
+    padding: 60px 0 70px;
+  }
+
+
+  .company__wrapper {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .company__wrapper button {
+    position: static;
+  }
+
+  .company__item {
+    padding: 30px 30px 25px;
+  }
+
+  .company__item-title {
+    font-size: 22px;
+  }
+
+  .company__text img {
+    margin: 30px 0;
+    height: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .company {
+    padding: 50px 0 60px;
+  }
+
+  .company__wrapper {
+    align-items: flex-start;
+  }
+
+
+  .company__wrapper button {
+    padding: 12px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: #60c880;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .company__wrapper button svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Перекрашиваем крестик */
+  .company__wrapper button svg rect {
+    fill: var(--belyy);
+  }
+
+  .company__content {
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .company__item {
+    padding: 25px 24px 22px;
+  }
+
+  .company__item-title {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .company__item-descr {
+    margin-top: 12px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .company__text {
+    margin-top: 30px;
+    font-size: 16px;
+  }
+
+  .company__text img {
+    margin: 28px 0;
+    height: auto;
+  }
+
+  .company__text p + p {
+    margin-top: 16px;
+  }
+}
+
+
+/* ======================== МАЛЕНЬКИЙ ТЕЛЕФОН ======================== */
+@media (max-width: 480px) {
+  .company {
+    padding: 40px 0 50px;
+  }
+
+
+  .container {
+    padding: 0;
+  }
+
+  .company__wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+  .company__wrapper button {
+    margin-left: 10px;
+  }
+
+  /* Убираем боковые рамки у списка */
+  .company__list {
+    border-right: none;
+    border-left: none;
+  }
+
+  .company__item {
+    padding: 25px 20px 22px;
+  }
+
+  /* Тексту возвращаем боковые отступы */
+  .company__text {
+    padding: 0 20px;
+    font-size: 16px;
+  }
+
+  .company__text img {
+    margin: 28px 0 30px;
+    height: 250px;
+    object-fit: cover; /* Чтобы картинка не плющилась */
+  }
+
+  .company__text p + p {
+    margin-top: 14px;
+  }
+}

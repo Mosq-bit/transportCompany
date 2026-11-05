@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@font-face {
+    font-family: 'BigBang';
+    src: url(/font/BigBang.ttf);
+}
+
+
+@font-face {
+  font-family: "Geometria";
+  src: url(/font/geometria-regular.ttf);
+}
+
+@font-face {
+  font-family: "GeometriaItalick";
+  src: url(/font/Geometria-ThinItalic.ttf);
+}
+
+@font-face {
+  font-family: "Soyuz Grotesk";
+  src: url(/font/SoyuzGroteskBold.ttf);
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url(/font/Gilroy-Regular_0.ttf);
+}
+
+html,
+body {
+  overflow-x: hidden;
+  /* Убирает горизонтальный скролл */
+  width: 100%;
+  /* Фиксирует ширину */
+}
+
+html {
+  /* плавный скрол */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 170%;
+  color: var(--belyy);
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1343px;
+  padding: 0 10px;
+}
+.container__mini{
+  margin: 0 auto;
+  max-width: 870px;
+  padding: 0 10px;
+}
+
+.none {
+  display: none;
+}
+
+.content__title {
+  font-size: 60px;
+  line-height: 75%;
+  color: var(--chernyy);
+}
+
+.card-num{
+  padding: 31px 28px 32px 22px;
+  border-radius: 100%;
+  background-color: #60c880;
+  width: 90px;
+  height: 90px;
+  font-size: 36px;
+  line-height: 75%;
+  text-align: center;
+  color: var(--belyy);
+}

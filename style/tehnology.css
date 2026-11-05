@@ -1,0 +1,195 @@
+.tehnology {
+  padding-bottom: 90px;
+}
+
+.tehnology__content-num::after {
+  left: 113px;
+  bottom: 34px;
+}
+
+.tehnology__groups {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 50px 60px;
+  justify-content: start;
+}
+
+.tehnology__group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tehnology__list-title {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.1;
+  color: #60c880;
+}
+
+.tehnology__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1px;
+  background: #d9d9d9;
+  border: 1px solid #d9d9d9;
+  width: fit-content;
+}
+
+.tehnology__item {
+  width: 154px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.tehnology__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.tehnology__item-pic {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+}
+/* ---------- Ноутбук: 3 колонки, но компактнее ---------- */
+@media (max-width: 1439px) {
+  .tehnology__groups {
+    gap: 40px 40px;
+  }
+
+  .tehnology__list-title {
+    font-size: 28px;
+  }
+
+  .tehnology__item {
+    width: 140px;
+    height: 110px;
+  }
+}
+
+/* ---------- Планшет: 2 колонки ---------- */
+@media (max-width: 1023px) {
+  .tehnology__groups {
+    grid-template-columns: repeat(2, auto);
+    gap: 40px 50px;
+  }
+
+  .tehnology__list-title {
+    font-size: 26px;
+  }
+
+  .tehnology__item {
+    width: 150px;
+    height: 110px;
+  }
+}
+
+/* ============ МОБИЛЬНЫЙ: слайдер для групп технологий ============ */
+@media (max-width: 767px) {
+  .tehnology {
+    padding-bottom: 60px;
+  }
+  .tehnology__content-num::after {
+    left: 75px;
+    bottom: 22px;
+  }
+
+  .tehnology__groups {
+    margin-top: 20px;
+    grid-template-columns: 1fr;
+    gap: 25px 0;
+  }
+
+  .tehnology__group {
+    min-width: 0;
+    gap: 15px;
+  }
+
+  .tehnology__list-title {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  .tehnology__list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0;
+
+    /* ключевое — список по ширине родителя */
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    background: none;
+    border: none;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    margin: 0 -16px;
+    padding: 0 16px 12px;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .tehnology__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tehnology__item {
+    flex: 0 0 140px;
+    width: 140px;
+    height: 96px;
+    scroll-snap-align: start;
+    border: 1px solid #d9d9d9;
+    background: #fff;
+  }
+
+  .tehnology__item-pic {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tehnology__content-num::after {
+    left: 58px;
+    bottom: 16px;
+  }
+  .tehnology__list-title {
+    font-size: 18px;
+  }
+
+  .tehnology__list {
+    margin: 0 -14px;
+    padding: 0 14px 10px;
+  }
+
+  .tehnology__item {
+    flex: 0 0 130px;
+    width: 130px;
+    height: 84px;
+  }
+
+  .tehnology__item-pic {
+    width: 60px;
+    height: 60px;
+  }
+}

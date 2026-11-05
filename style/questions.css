@@ -1,0 +1,221 @@
+.questions {
+  position: relative;
+  z-index: 2;
+  margin-bottom: -243px;
+  padding-bottom: 344px;
+
+}
+
+.questions__content-num {
+  color: var(--belyy);
+}
+
+.questions__content-num::after {
+  background-color: var(--belyy);
+  left: 120px;
+  bottom: 30px;
+}
+.questions__title {
+  color: var(--belyy);
+}
+.questions__descr {
+  margin-top: 30px;
+}
+
+.question__form {
+  margin-top: 40px;
+  display: flex;
+  gap: 30px;
+  color: var(--belyy);
+  font-size: 18px;
+  line-height: 150%;
+
+  button {
+    width: 410px;
+    border: 1px solid var(--belyy);
+    border-radius: 200px;
+    color: var(--chernyy);
+    background-color: var(--belyy);
+    font-size: 18px;
+    line-height: 80%;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+.question__form-input {
+  width: 410px;
+  padding: 16px 0 17px 30px;
+  border: 1px solid var(--belyy);
+  border-radius: 200px;
+}
+.question__form-input::placeholder {
+  color: var(--belyy);
+  font-family: var(--second-family);
+  font-size: 18px;
+  line-height: 150%;
+  opacity: 1;
+}
+
+.question__form-input + .question__form-input {
+  margin-right: 0px;
+}
+
+.question__politic {
+  margin-top: 38px;
+  font-family: var(--second-family);
+  font-size: 16px;
+  line-height: 170%;
+  span {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+  }
+}
+
+/* ---------- Ноутбук ---------- */
+@media (max-width: 1439px) {
+  .questions {
+    margin-bottom: -120px;
+    padding-bottom: 80px;
+  }
+
+  .footer {
+    padding-top: 240px;
+  }
+
+  .question__form-input,
+  .question__form button {
+    width: 100%;
+    max-width: 340px;
+  }
+}
+
+/* ---------- Планшет ---------- */
+@media (max-width: 1023px) {
+  .questions {
+    margin-bottom: -100px;
+    padding-bottom: 60px;
+  }
+
+  .footer {
+    padding-top: 200px;
+  }
+
+  .question__form {
+    gap: 16px;
+  }
+
+  .question__form-input,
+  .question__form button {
+    max-width: 280px;
+    font-size: 16px;
+  }
+
+  .question__form-input {
+    padding: 14px 0 15px 24px;
+  }
+
+  .question__form-input::placeholder {
+    font-size: 16px;
+  }
+
+  .question__form button {
+    padding: 16px 24px;
+    line-height: 1;
+  }
+}
+
+/* ---------- Большой телефон ---------- */
+@media (max-width: 767px) {
+  .questions {
+    margin-bottom: -80px;
+    padding-bottom: 40px;
+  }
+
+  .footer {
+    padding-top: 140px;
+  }
+
+  .questions__content-num::after {
+    left: 80px;
+    bottom: 22px;
+  }
+
+  .questions__descr {
+    margin-top: 20px;
+  }
+
+  .question__form {
+    margin-top: 28px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .question__form-input,
+  .question__form button {
+    width: 100%;
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  .question__form-input {
+    padding: 14px 0 14px 22px;
+  }
+
+  .question__form button {
+    padding: 18px 24px;
+    line-height: 1;
+  }
+
+  .question__politic {
+    margin-top: 24px;
+    padding-bottom: 0;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+/* ---------- Маленький телефон ---------- */
+@media (max-width: 480px) {
+  .questions {
+    margin-bottom: -60px;
+    padding-bottom: 20px;
+  }
+
+  .footer {
+    padding-top: 100px;
+  }
+
+  .questions__content-num::after {
+    left: 58px;
+    bottom: 18px;
+  }
+
+  .questions__descr {
+    margin-top: 15px;
+  }
+
+  .question__form {
+    margin-top: 20px;
+    gap: 10px;
+  }
+
+  .question__form-input {
+    padding: 13px 0 13px 20px;
+  }
+
+  .question__form-input::placeholder {
+    font-size: 15px;
+  }
+
+  .question__form button {
+    padding: 16px 20px;
+    font-size: 15px;
+  }
+
+  .question__politic {
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+}
