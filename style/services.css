@@ -419,6 +419,9 @@
   .services__card-link {
     font-size: 14px;
   }
+  .services__card-link span{
+    display: none;
+  }
 
   .services__card-link svg {
     width: 12px;
