@@ -158,6 +158,28 @@
                     <button class="footer__btn po__services-btn" id="openModalBtn" type="button">отправить заявку</button>
                 </div>
             </div>
+            <!-- Модальное окно -->
+            <div id="myModal" class="modal">
+                <div class="modal__content">
+                    <span class="close__btn">&times;</span>
+                    <h2>Заказать звонок</h2>
+                    <form class="question__form footer__form" action="/api/send"
+                        method="POST">
+                        <input class="footer__form-input" id="modal-user-name"
+                            type="text" name="name" placeholder="Ваше имя"
+                            autocomplete="name" required>
+                        <input class="footer__form-input" id="modal-phone"
+                            type="tel" name="phone"
+                            placeholder="Контактный телефон" autocomplete="tel"
+                            required>
+                        <button type="submit"
+                            class="question__btn footer__btn">Отправить
+                            заявку</button>
+                    </form>
+                    <a href="#">Соглашаюсь с <span>Политикой обработки персональных
+                      данных</span></a>
+                </div>
+            </div>
         </section>
     </body>
 </html>
