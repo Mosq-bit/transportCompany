@@ -1,5 +1,5 @@
 /* =========================================================
-   БУРГЕР
+   БУРГЕР И ВЫПАДАЮЩЕЕ МЕНЮ (ДЕСКТОП)
    ========================================================= */
 (function () {
   const burger = document.getElementById('burger');
@@ -7,10 +7,8 @@
   const overlay = document.getElementById('menuOverlay');
   const body = document.body;
 
-  if (!burger || !navList || !overlay) {
-    console.warn('Бургер: не найдены элементы', { burger, navList, overlay });
-    return;
-  }
+  // Если элементов нет, скрипт просто завершится, не ломая страницу
+  if (!burger || !navList || !overlay) return;
 
   function openMenu() {
     burger.classList.add('is-open');
@@ -56,21 +54,15 @@
       if (window.innerWidth > 900) closeMenu();
     }, 150);
   });
-})();
 
-/* =========================================================
-   ВЫПАДАЮЩЕЕ МЕНЮ (Услуги)
-   ========================================================= */
-(function () {
+  // Дропдаун в десктопном меню
   const dropdowns = document.querySelectorAll('.header__nav-item--dropdown');
-
   dropdowns.forEach((item) => {
     const toggle = item.querySelector('.header__nav-link--toggle');
     if (!toggle) return;
 
     toggle.addEventListener('click', (e) => {
       e.stopPropagation();
-
       const isOpen = item.classList.toggle('is-open');
       toggle.setAttribute('aria-expanded', String(isOpen));
 
@@ -84,7 +76,6 @@
     });
   });
 
-  // Клик вне — закрыть (только на десктопе)
   document.addEventListener('click', (e) => {
     if (window.innerWidth <= 900) return;
     dropdowns.forEach((item) => {
@@ -94,17 +85,6 @@
         if (t) t.setAttribute('aria-expanded', 'false');
       }
     });
-  });
-
-  // Escape — закрыть
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      dropdowns.forEach((item) => {
-        item.classList.remove('is-open');
-        const t = item.querySelector('.header__nav-link--toggle');
-        if (t) t.setAttribute('aria-expanded', 'false');
-      });
-    }
   });
 })();
 
@@ -155,10 +135,7 @@
   const closeBtn = document.getElementById('menuClose');
   const body = document.body;
 
-  if (!burger || !mobileMenu) {
-    console.warn('Мобильное меню: не найдены элементы');
-    return;
-  }
+  if (!burger || !mobileMenu) return;
 
   function openMenu() {
     mobileMenu.classList.add('is-open');
@@ -202,31 +179,42 @@
   });
 })();
 
+/* =========================================================
+   СЛАЙДЕР НОВОСТЕЙ
+   ========================================================= */
+(function () {
+  const slider = document.querySelector('.news__slider');
+  if (!slider) return; // Если слайдера нет на странице, выходим
 
-const slider = document.querySelector('.news__slider');
-const prev = document.querySelector('.news__btn--prev');
-const next = document.querySelector('.news__btn--next');
-const slide = slider.querySelector('.news__slide');
-const step = slide.offsetWidth + 1;   /* +1 — gap */
+  const prev = document.querySelector('.news__btn--prev');
+  const next = document.querySelector('.news__btn--next');
+  const slide = slider.querySelector('.news__slide');
+  
+  if (!slide || !prev || !next) return;
 
-next.addEventListener('click', () => {
-  slider.scrollBy({ left: step, behavior: 'smooth' });
-});
-prev.addEventListener('click', () => {
-  slider.scrollBy({ left: -step, behavior: 'smooth' });
-});
+  const step = slide.offsetWidth + 1; /* +1 — gap */
 
-/* состояние кнопок */
-function updateBtns() {
-  const max = slider.scrollWidth - slider.clientWidth;
-  prev.disabled = slider.scrollLeft <= 1;
-  next.disabled = slider.scrollLeft >= max - 1;
-}
-slider.addEventListener('scroll', updateBtns);
-updateBtns();
-// 
+  next.addEventListener('click', () => {
+    slider.scrollBy({ left: step, behavior: 'smooth' });
+  });
+  
+  prev.addEventListener('click', () => {
+    slider.scrollBy({ left: -step, behavior: 'smooth' });
+  });
 
+  function updateBtns() {
+    const max = slider.scrollWidth - slider.clientWidth;
+    prev.disabled = slider.scrollLeft <= 1;
+    next.disabled = slider.scrollLeft >= max - 1;
+  }
+  
+  slider.addEventListener('scroll', updateBtns);
+  updateBtns();
+})();
 
+/* =========================================================
+   ПЛАВНЫЙ СКРОЛЛ (ФУНКЦИЯ)
+   ========================================================= */
 function smoothScrollBy(distance, duration) {
   const start = window.scrollY;
   const startTime = performance.now();
@@ -235,7 +223,6 @@ function smoothScrollBy(distance, duration) {
     const elapsed = currentTime - startTime;
     const progress = Math.min(elapsed / duration, 1);
 
-    // easeInOutCubic — плавное ускорение и замедление
     const ease = progress < 0.5
       ? 4 * progress * progress * progress
       : 1 - Math.pow(-2 * progress + 2, 3) / 2;
@@ -250,26 +237,32 @@ function smoothScrollBy(distance, duration) {
   requestAnimationFrame(scroll);
 }
 
+/* =========================================================
+   МОДАЛЬНОЕ ОКНО
+   ========================================================= */
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('myModal');
+  const btn = document.getElementById('openModalBtn');
+  const closeBtn = document.querySelector('.close__btn');
 
+  // Если элементов нет (например, мы на другой странице), ничего не делаем
+  if (modal && btn && closeBtn) {
+    
+    btn.addEventListener('click', () => {
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden'; // Блокируем фон
+    });
 
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    });
 
-const modal = document.getElementById('myModal');
-const btn = document.getElementById('openModalBtn');
-const closeBtn = document.querySelector('.close__btn');
-
-// Открыть по клику на кнопку
-btn.addEventListener('click', () => {
-  modal.style.display = 'block';
-});
-
-// Закрыть по клику на крестик
-closeBtn.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
-
-// Закрыть по клику вне окна
-window.addEventListener('click', (event) => {
-  if (event.target === modal) {
-    modal.style.display = 'none';
+    window.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+      }
+    });
   }
 });
