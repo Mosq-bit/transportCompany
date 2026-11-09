@@ -76,6 +76,13 @@
 
   .footer__policy {
     text-decoration: underline;
+    font-family: var(--font4);
+    font-size: 16px;
+    line-height: 170%;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: var(--belyy);
+    opacity: 0.5;
   }
 }
 /* modal */
