@@ -70,9 +70,7 @@
     .company{
         padding: 75px 0 50px;
     }
-  .container {
-    padding: 0;
-  }
+
   .company__wrapper {
     padding-left: 20px;
   }
@@ -240,9 +238,6 @@
   }
 
 
-  .container {
-    padding: 0;
-  }
 
   .company__wrapper {
     padding-left: 20px;
