@@ -113,6 +113,8 @@
   color: var(--chernyy);
   a {
     font-size: 16px;
+    line-height: 170%;
+    color: #888;
   }
 }
 
