@@ -600,6 +600,11 @@
     font-size: 15px;
   }
 
+  .modal__content {
+        a {
+            font-size: 13px;
+        }
+
   .modal__content a span {
     margin-top: 10px;
     font-size: 13px;
