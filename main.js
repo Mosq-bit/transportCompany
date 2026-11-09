@@ -242,22 +242,27 @@ function smoothScrollBy(distance, duration) {
    ========================================================= */
 document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('myModal');
-  const btn = document.getElementById('openModalBtn');
   const closeBtn = document.querySelector('.close__btn');
+  const openBtns = document.querySelectorAll('.js-open-modal'); // Ищем ВСЕ кнопки
 
-  // Если элементов нет (например, мы на другой странице), ничего не делаем
-  if (modal && btn && closeBtn) {
+  // Если модалки нет на странице, ничего не делаем
+  if (modal && closeBtn) {
     
-    btn.addEventListener('click', () => {
-      modal.style.display = 'block';
-      document.body.style.overflow = 'hidden'; // Блокируем фон
+    // Вешаем событие на каждую кнопку открытия
+    openBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Блокируем фон
+      });
     });
 
+    // Закрытие по крестику
     closeBtn.addEventListener('click', () => {
       modal.style.display = 'none';
       document.body.style.overflow = '';
     });
 
+    // Закрытие по клику вне окна
     window.addEventListener('click', (event) => {
       if (event.target === modal) {
         modal.style.display = 'none';
